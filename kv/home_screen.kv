@@ -1,0 +1,38 @@
+<HomeScreen>:
+	BoxLayout:
+		orientation: 'vertical'
+		BoxLayout:
+			orientation: 'horizontal'
+			spacing: 15
+			size_hint: (1, .1)
+			Button:
+				text: 'settings'
+				on_release: app.root.change_screen("settings")
+				size_hint: (.1, 1)
+			BoxLayout:
+				orientation: 'horizontal'
+				TextInput:
+					id: 'search_bar'
+					text: 'Hello world'
+					multiline: False
+					size_hint: (.9, 1)
+					padding_y: [self.height / 2.0 - (self.line_height / 2.0), 0]
+				Button:
+					text: 'search'
+					on_release: print("search")
+					size_hint: (.1, 1)
+
+		BoxLayout:
+			orientation: 'vertical'
+			Label:
+				text: "Головний екран"
+				font_size: 32
+
+		BoxLayout:
+			orientation: 'vertical'
+			padding: [self.width / 2.0, 0]
+			Button:
+				text: 'download'
+				on_release: print("download")
+
+
